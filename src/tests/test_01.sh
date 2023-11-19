@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ""
-echo "Part 1. First effort"
+echo -e "\e[47;30mPart 1. First effort\e[0m"
 echo ""
 echo "Example of valid command input: bash main.sh EXAMPLE"
 echo ""

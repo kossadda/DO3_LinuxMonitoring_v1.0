@@ -1,7 +1,12 @@
 #!/bin/bash
 
-if [ "$#" -eq 0 ]; then
-        echo "There are no parameters. Please enter one parameter"
+if [ $# -eq 1 ]; then
+        param=$1
+        if [[ $param =~ ^[0-9]+$ ]]; then
+                exit 1
+        fi
+elif [ $# -eq 0 ]; then
+        exit 1
 else
-        echo "The number of parameters is more than necessary. Please enter one parameter"
+        exit 1
 fi

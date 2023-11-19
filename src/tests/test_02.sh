@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ""
-echo "Part 2. System research"
+echo -e "\e[47;30mPart 2. System research\e[0m"
 echo ""
 cd 02 && ./main.sh
 
