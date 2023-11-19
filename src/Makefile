@@ -1,9 +1,7 @@
-main:
-	@clear
-	@vim main.sh
-t:
-	@bash main.sh
+test_00: test_01 test_02
 
 test_01:
-	@bash test_01.sh
+	@bash tests/test_01.sh
 
+test_02:
+	@bash tests/test_02.sh
