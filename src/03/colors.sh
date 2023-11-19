@@ -19,41 +19,41 @@ back_black=40
 text_black=30
 
 case $1 in
-1) back_clr_name=$back_white;;
-2) back_clr_name=$back_red;;
-3) back_clr_name=$back_green;;
-4) back_clr_name=$back_blue;;
-5) back_clr_name=$back_purple;;
-6) back_clr_name=$back_black;;
+1) column1_background=$back_white;;
+2) column1_background=$back_red;;
+3) column1_background=$back_green;;
+4) column1_background=$back_blue;;
+5) column1_background=$back_purple;;
+6) column1_background=$back_black;;
 esac
 
 case $2 in
-1) text_clr_name=$text_white;;
-2) text_clr_name=$text_red;;
-3) text_clr_name=$text_green;;
-4) text_clr_name=$text_blue;;
-5) text_clr_name=$text_purple;;
-6) text_clr_name=$text_black;;
+1) column1_font_color=$text_white;;
+2) column1_font_color=$text_red;;
+3) column1_font_color=$text_green;;
+4) column1_font_color=$text_blue;;
+5) column1_font_color=$text_purple;;
+6) column1_font_color=$text_black;;
 esac
 
 case $3 in
-1) back_clr_value=$back_white;;
-2) back_clr_value=$back_red;;
-3) back_clr_value=$back_green;;
-4) back_clr_value=$back_blue;;
-5) back_clr_value=$back_purple;;
-6) back_clr_value=$back_black;;
+1) column2_background=$back_white;;
+2) column2_background=$back_red;;
+3) column2_background=$back_green;;
+4) column2_background=$back_blue;;
+5) column2_background=$back_purple;;
+6) column2_background=$back_black;;
 esac
 
 case $4 in
-1) text_clr_value=$text_white;;
-2) text_clr_value=$text_red;;
-3) text_clr_value=$text_green;;
-4) text_clr_value=$text_blue;;
-5) text_clr_value=$text_purple;;
-6) text_clr_value=$text_black;;
+1) column2_font_color=$text_white;;
+2) column2_font_color=$text_red;;
+3) column2_font_color=$text_green;;
+4) column2_font_color=$text_blue;;
+5) column2_font_color=$text_purple;;
+6) column2_font_color=$text_black;;
 esac
 
-name="\e[${back_clr_name};${text_clr_name}m"
-value="\e[${back_clr_value};${text_clr_value}m"
+column1="\e[${column1_background};${column1_font_color}m"
+column2="\e[${column2_background};${column2_font_color}m"
 close="\e[0m"
