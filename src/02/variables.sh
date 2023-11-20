@@ -6,7 +6,7 @@ user=$USER
 os=$(grep -E '^NAME=' /etc/os-release | awk -F= '{gsub(/"/, "", $2); print $2}')
 os_version=$(grep -E '^VERSION=' /etc/os-release | awk -F= '{gsub(/"/, "", $2); print $2}')
 date=$(date "+%d %b %Y %H:%M:%S")
-uptime=$(uptime -p | grep -o "[0-9]\+ hours, [0-9]\+ minutes")
+uptime=$(uptime -p | awk '{for (i=2; i<=NF; i++) printf "%s ", $i; print ""}')
 uptime_sec=$(cat /proc/uptime | awk '{print $1,"seconds"}')
 ip=$(hostname -I)
 mask=$(ifconfig | grep -E "inet $ip" | awk '{print $2, $3, $4}')
