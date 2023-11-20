@@ -18,10 +18,10 @@ text_purple=35
 back_black=40
 text_black=30
 
-column1_back_config=$(grep column1_background configuration.cfg | awk -F= '{print $2}')
-column1_font_config=$(grep column1_font_color configuration.cfg | awk -F= '{print $2}')
-column2_back_config=$(grep column2_background configuration.cfg | awk -F= '{print $2}')
-column2_font_config=$(grep column2_font_color configuration.cfg | awk -F= '{print $2}')
+column1_back_config=$(grep column1_background configuration.conf | awk -F= '{print $2}')
+column1_font_config=$(grep column1_font_color configuration.conf | awk -F= '{print $2}')
+column2_back_config=$(grep column2_background configuration.conf | awk -F= '{print $2}')
+column2_font_config=$(grep column2_font_color configuration.conf | awk -F= '{print $2}')
 
 case $column1_back_config in
 1) column1_background=$back_white;;

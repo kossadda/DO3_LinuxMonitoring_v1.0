@@ -9,14 +9,14 @@ itteration=0
 
 while [ $val -ne 1 ]; do
         if [ $itteration -eq 0 ]; then	
-		vim 04/configuration.cfg
+		vim 04/configuration.conf
                 cd 04 && ./main.sh
         fi
 	echo ""
         read -p "Would you like to repeat the script with another colors? (Y(y)/N(n) " decision
         case $decision in
           y|Y)
-                vim configuration.cfg
+                vim configuration.conf
                 ./main.sh
                 ;;
           *)
