@@ -12,9 +12,7 @@ if [ "$(ls -1 *.status 2>/dev/null)" ]; then
 	echo ""
 	read -p "Would you like to view the contents of the file? (Y(y)/N(n)) " view
 	case $view in
-	  y|Y)
-		cat $(ls *.status)
-		;;
+	  	y|Y) cat $(ls *.status);;
 	esac	
 else
 	echo "The data file was not created"

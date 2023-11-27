@@ -15,24 +15,24 @@ else
 fi
 
 if [ $column1_font_config -ge 1 ] && [ $column1_font_config -le 6 ]; then
-        valid1_font=$column1_font_color
+    valid1_font=$column1_font_color
 else
-        valid1_font=$text_purple
-        default1_font=1
+    valid1_font=$text_purple
+    default1_font=1
 fi
 
 if [ $column2_back_config -ge 1 ] && [ $column2_back_config -le 6 ]; then
-        valid2_back=$column2_background
+    valid2_back=$column2_background
 else
-        valid2_back=$back_green
-        default2_back=1
+    valid2_back=$back_green
+    default2_back=1
 fi
 
 if [ $column2_font_config -ge 1 ] && [ $column2_font_config -le 6 ]; then
-        valid2_font=$column2_font_color
+    valid2_font=$column2_font_color
 else
-        valid2_font=$text_red
-        default2_font=1
+    valid2_font=$text_red
+    default2_font=1
 fi
 
 column1="\e[${valid1_back};${valid1_font}m"
